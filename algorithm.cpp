@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <exception>
 using namespace std;
 void quickSort(vector<int>& arr, int l, int r) {
     if (l >= r) return;
@@ -137,6 +138,10 @@ public:
     int getTop() {
         if (root)
             return root[0];
+        else {
+            // 错误的
+            terminate();
+        }
     }
 
     void print() {
